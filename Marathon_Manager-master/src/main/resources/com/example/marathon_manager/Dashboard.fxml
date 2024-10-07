@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.AreaChart?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.marathon_manager.DashboardController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <BorderPane layoutX="-14.0" layoutY="-14.0" prefHeight="700.0" prefWidth="1000.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="-14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="-14.0">
+               <top>
+                  <AnchorPane prefHeight="35.0" prefWidth="1000.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane layoutX="26.0" layoutY="-86.0" prefHeight="35.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Pane layoutX="14.0" prefHeight="118.4" prefWidth="1000.0" styleClass="nav-form" stylesheets="@css/dashboardDesign.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="-14.0" AnchorPane.topAnchor="0.0" />
+                           </children></AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </top>
+               <left>
+                  <AnchorPane prefHeight="649.0" prefWidth="242.0" styleClass="nav-form" stylesheets="@css/dashboardDesign.css" BorderPane.alignment="CENTER">
+                     <children>
+      
+                        <VBox layoutX="-3.0" layoutY="14.0" prefHeight="666.0" prefWidth="247.0" style="-fx-background-color: #1D267D;">
+                           <children>
+                              <Pane prefHeight="166.0" prefWidth="247.0">
+                                 <children>
+                                    <ImageView fitHeight="154.0" fitWidth="123.0" layoutX="62.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@Assets/admin.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </Pane>
+                              <Button fx:id="dashboard_btn" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="62.0" prefWidth="254.0" stylesheets="@fullpackstyling.css" text="Dashboard" textFill="WHITE">
+                                 <padding>
+                                    <Insets left="50.0" />
+                                 </padding>
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="29.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@Assets/icons8-statistic-64.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="chrono_btn" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="62.0" prefWidth="254.0" stylesheets="@fullpackstyling.css" text="chrono_agent" textFill="WHITE">
+                                 <padding>
+                                    <Insets left="50.0" />
+                                 </padding>
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="29.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@Assets/stopwatch%20(1).png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </Button>
+                              <Button fx:id="marathon_btn" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="62.0" prefWidth="254.0" stylesheets="@fullpackstyling.css" text="Marathon" textFill="WHITE">
+                                 <padding>
+                                    <Insets left="50.0" />
+                                 </padding>
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="27.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@Assets/marathon.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="runner_btn" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="62.0" prefWidth="254.0" stylesheets="@fullpackstyling.css" text="Runner" textFill="WHITE">
+                                 <padding>
+                                    <Insets left="50.0" />
+                                 </padding>
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="31.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@Assets/runner.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="participation_btn" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="62.0" prefWidth="254.0" stylesheets="@fullpackstyling.css" text="Participation" textFill="WHITE">
+                                 <padding>
+                                    <Insets left="50.0" />
+                                 </padding>
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="35.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@Assets/group.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="sponsor_btn" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="68.0" prefWidth="254.0" stylesheets="@fullpackstyling.css" text="Sponsor" textFill="WHITE">
+                                 <padding>
+                                    <Insets left="50.0" />
+                                 </padding>
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="29.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@Assets/deal.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="rankingBtn" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="68.0" prefWidth="254.0" stylesheets="@fullpackstyling.css" text="Ranking" textFill="WHITE">
+                                 <padding>
+                                    <Insets left="50.0" />
+                                 </padding>
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="29.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@Assets/icons8-rank-48.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </VBox>
+                          </children></AnchorPane>
+               </left>
+               <center>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane fx:id="home_form" layoutX="104.0" layoutY="134.0" prefHeight="668.0" prefWidth="757.6" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="30.0" layoutY="32.0" prefHeight="615.0" prefWidth="705.0" stylesheets="@css/dashboardDesign.css">
+                                 <styleClass>
+                                    <String fx:value="white-bg" />
+                                    <String fx:value="shadow" />
+                                 </styleClass>
+                                 <children>
+                                    <AnchorPane prefHeight="183.0" prefWidth="706.0" stylesheets="@css/dashboardDesign.css">
+                                       <styleClass>
+                                          <String fx:value="white-bg" />
+                                          <String fx:value="shadow" />
+                                       </styleClass>
+                                       <children>
+                                          <AnchorPane layoutX="235.0" layoutY="10.0" prefHeight="162.0" prefWidth="228.0" styleClass="nav-form" stylesheets="@css/dashboardDesign.css">
+                                             <children>
+                                                <ImageView fitHeight="83.0" fitWidth="101.0" layoutX="14.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@Assets/run.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label layoutX="49.0" layoutY="111.0" text="Total Marathons" textFill="WHITE">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="totalMarathonTxt" layoutX="183.0" prefHeight="58.0" prefWidth="30.0" text="0" textFill="WHITE">
+                                                   <font>
+                                                      <Font size="54.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane layoutX="482.0" layoutY="10.0" prefHeight="162.0" prefWidth="224.0" styleClass="nav-form" stylesheets="@css/dashboardDesign.css" AnchorPane.rightAnchor="10.0">
+                                             <children>
+                                                <ImageView fitHeight="83.0" fitWidth="101.0" layoutX="12.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@Assets/icons8-sponsor-64.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label layoutX="47.0" layoutY="111.0" text="Total Sponsors" textFill="WHITE">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="totalSponsorTxt" layoutX="181.0" prefHeight="58.0" prefWidth="30.0" text="0" textFill="WHITE">
+                                                   <font>
+                                                      <Font size="54.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane layoutY="10.0" prefHeight="162.0" prefWidth="224.0" styleClass="nav-form" stylesheets="@css/dashboardDesign.css" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="482.4">
+                                             <children>
+                                                <ImageView fitHeight="83.0" fitWidth="101.0" layoutX="14.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@Assets/icons8-groups-64.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label layoutX="28.0" layoutY="111.0" text="Total Enrolled Runner" textFill="WHITE">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="totalEnrolledTxt" layoutX="169.0" prefHeight="58.0" prefWidth="30.0" text="0" textFill="WHITE">
+                                                   <font>
+                                                      <Font size="54.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </AnchorPane>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="14.0" layoutY="192.0" prefHeight="414.0" prefWidth="326.0" stylesheets="@css/dashboardDesign.css">
+                                       <styleClass>
+                                          <String fx:value="white-bg" />
+                                          <String fx:value="shadow" />
+                                       </styleClass>
+                                       <children>
+                                          <BarChart fx:id="totalenrolledchart" layoutX="-154.0" layoutY="-25.0" prefHeight="414.4" prefWidth="346.4" title="Total Enrolled Runners" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <xAxis>
+                                              <CategoryAxis side="BOTTOM" />
+                                            </xAxis>
+                                            <yAxis>
+                                              <NumberAxis side="LEFT" />
+                                            </yAxis>
+                                          </BarChart>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="366.0" layoutY="192.0" prefHeight="191.0" prefWidth="326.0" stylesheets="@css/dashboardDesign.css">
+                                       <styleClass>
+                                          <String fx:value="white-bg" />
+                                          <String fx:value="shadow" />
+                                       </styleClass>
+                                       <children>
+                                          <LineChart fx:id="totalmarathonchart" layoutX="-123.0" layoutY="-104.0" prefHeight="296.0" prefWidth="377.6" title="Total Marathons" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <xAxis>
+                                              <CategoryAxis side="BOTTOM" />
+                                            </xAxis>
+                                            <yAxis>
+                                              <NumberAxis side="LEFT" />
+                                            </yAxis>
+                                          </LineChart>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="366.0" layoutY="399.0" prefHeight="191.0" prefWidth="326.0" stylesheets="@css/dashboardDesign.css">
+                                       <styleClass>
+                                          <String fx:value="white-bg" />
+                                          <String fx:value="shadow" />
+                                       </styleClass>
+                                       <children>
+                                          <AreaChart fx:id="totalsponsorchart" layoutX="-138.0" layoutY="-156.0" prefHeight="244.0" prefWidth="362.4" title="Total Sponsors" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <xAxis>
+                                              <CategoryAxis side="BOTTOM" />
+                                            </xAxis>
+                                            <yAxis>
+                                              <NumberAxis side="LEFT" />
+                                            </yAxis>
+                                          </AreaChart>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                              <Button fx:id="close" layoutX="729.0" layoutY="1.0" mnemonicParsing="false" onAction="#CloseAction" onMouseClicked="#CloseAction" styleClass="close" stylesheets="@fullpackstyling.css" text="X" textFill="#e70000" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </center>
+               <bottom>
+                  <Pane prefHeight="12.0" prefWidth="1000.0" styleClass="nav-form" stylesheets="@css/dashboardDesign.css" BorderPane.alignment="CENTER" />
+               </bottom>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.marathon_manager.ParticipantController">
+    <children>
+        <VBox prefHeight="700.0" prefWidth="240.0" style="-fx-background-color: #1D267D;" stylesheets="@css/dashboardDesign.css">
+            <children>
+                <Pane prefHeight="129.0" prefWidth="240.0">
+                    <children>
+                        <ImageView fitHeight="123.0" fitWidth="129.0" layoutX="56.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@Assets/admin.png" />
+                            </image>
+                        </ImageView>
+                    </children>
+                </Pane>
+            <Button fx:id="dashboard_btn" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="62.0" prefWidth="254.0" stylesheets="@fullpackstyling.css" text="Dashboard" textFill="WHITE">
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="29.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Assets/icons8-statistic-64.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+                <Button fx:id="chrono_btn" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="62.0" prefWidth="254.0" stylesheets="@fullpackstyling.css" text="chrono_agent" textFill="WHITE">
+                    <padding>
+                        <Insets left="50.0" />
+                    </padding>
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                    <graphic>
+                        <ImageView fitHeight="29.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@Assets/stopwatch%20(1).png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <VBox.margin>
+                        <Insets />
+                    </VBox.margin>
+                </Button>
+                <Button fx:id="marathon_btn" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="62.0" prefWidth="254.0" stylesheets="@fullpackstyling.css" text="Marathon" textFill="WHITE">
+                    <padding>
+                        <Insets left="50.0" />
+                    </padding>
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                    <graphic>
+                        <ImageView fitHeight="27.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@Assets/marathon.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button fx:id="runner_btn" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="62.0" prefWidth="254.0" stylesheets="@fullpackstyling.css" text="Runner" textFill="WHITE">
+                    <padding>
+                        <Insets left="50.0" />
+                    </padding>
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                    <graphic>
+                        <ImageView fitHeight="31.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@Assets/runner.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button fx:id="participation_btn" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="62.0" prefWidth="254.0" stylesheets="@fullpackstyling.css" text="Participation" textFill="WHITE">
+                    <padding>
+                        <Insets left="50.0" />
+                    </padding>
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                    <graphic>
+                        <ImageView fitHeight="35.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@Assets/group.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button fx:id="sponsor_btn" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="62.0" prefWidth="254.0" stylesheets="@fullpackstyling.css" text="Sponsor" textFill="WHITE">
+                    <padding>
+                        <Insets left="50.0" />
+                    </padding>
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                    <graphic>
+                        <ImageView fitHeight="29.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@Assets/deal.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+            <Button fx:id="rankingBtn" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="68.0" prefWidth="254.0" stylesheets="@fullpackstyling.css" text="Ranking" textFill="WHITE">
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="29.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Assets/icons8-rank-48.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            </children>
+        </VBox>
+        <GridPane layoutX="240.0" layoutY="291.0" prefHeight="408.0" prefWidth="759.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="756.0" minWidth="10.0" prefWidth="748.800048828125" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="108.4" minHeight="10.0" prefHeight="34.8" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="152.599951171875" minHeight="0.0" prefHeight="35.60000000000001" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="334.3999755859375" minHeight="10.0" prefHeight="326.1999877929687" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <TableView fx:id="participationTable" onSort="#addnewbtn" prefHeight="356.0" prefWidth="756.0" stylesheets="@css/dashboardDesign.css" GridPane.rowIndex="2">
+                    <columns>
+                        <TableColumn fx:id="participationIdColumn" prefWidth="107.20001220703125" text="participation ID" />
+                        <TableColumn fx:id="marathonNameColumn" prefWidth="124.7999267578125" text="Marathon Name" />
+                        <TableColumn fx:id="firstNameColumn" prefWidth="128.00003051757812" text="Runner First Name" />
+                        <TableColumn fx:id="lastNameColumn" prefWidth="128.79998779296875" text="Runner Last Name" />
+                        <TableColumn fx:id="registrationDateColumn" prefWidth="133.60003662109375" text="registration_date" />
+                        <TableColumn fx:id="paymentStatusColumn" prefWidth="141.5999755859375" text="payment_status" />
+                    </columns>
+                </TableView>
+                <HBox prefHeight="90.0" prefWidth="756.0" GridPane.rowIndex="1">
+                    <children>
+                  <ImageView fitHeight="32.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Assets/icons8-search-48.png" />
+                     </image>
+                  </ImageView>
+                        <TextField prefHeight="34.0" prefWidth="725.0" />
+                    </children>
+                </HBox>
+            <HBox fx:id="participationIdhbox" prefHeight="39.0" prefWidth="756.0" visible="false">
+               <children>
+                  <Button fx:id="addnewBtn" mnemonicParsing="false" onAction="#addnewbtn" prefHeight="26.0" prefWidth="139.0" stylesheets="@fullpackstyling.css" text="Add New" textFill="WHITE">
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </Button>
+                  <Button fx:id="show_btn" mnemonicParsing="false" onAction="#initialize_Waiting_list" prefHeight="26.0" prefWidth="100.0" stylesheets="@fullpackstyling.css" text="Show" textFill="#fffbfb">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="participationBtn1" mnemonicParsing="false" onAction="#initialize_Participation" prefHeight="26.0" prefWidth="179.0" stylesheets="@fullpackstyling.css" text="Participation List" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="DeclineBtn" mnemonicParsing="false" onAction="#DeclineRunner" prefHeight="27.0" prefWidth="119.0" stylesheets="@fullpackstyling.css" text="Decline" textFill="WHITE" visible="false">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="insert_btn" mnemonicParsing="false" onAction="#addnew_participation" prefHeight="26.0" prefWidth="100.0" stylesheets="@fullpackstyling.css" text="Insert" textFill="WHITE" visible="false">
+                     <HBox.margin>
+                        <Insets left="200.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </HBox>
+            <TableView fx:id="runnerTable" layoutX="10.0" layoutY="104.0" onMouseClicked="#getSelectedColu" prefHeight="356.0" prefWidth="756.0" stylesheets="@css/dashboardDesign.css" visible="false" GridPane.rowIndex="2">
+               <columns>
+                  <TableColumn fx:id="marathonNameColumn1" prefWidth="152.00003051757812" text="Marathon Name" />
+                  <TableColumn fx:id="firstNameColumn1" prefWidth="135.99993896484375" text="Runner First Name" />
+                  <TableColumn fx:id="lastNameColu" prefWidth="135.20001220703125" text="Runner Last Name" />
+                  <TableColumn fx:id="EmailColumn" minWidth="7.199951171875" prefWidth="160.0" text="Email" />
+                  <TableColumn fx:id="ageColumn" prefWidth="253.5999755859375" text="Age" />
+               </columns>
+            </TableView>
+            <HBox fx:id="RunnerHbox" layoutX="10.0" layoutY="10.0" prefHeight="39.0" prefWidth="756.0">
+               <children>
+                  <Button fx:id="waiting_list" mnemonicParsing="false" onAction="#initialize_Waiting_list" prefHeight="26.0" prefWidth="146.0" stylesheets="@fullpackstyling.css" text="Waiting List" textFill="#fffbfb">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="participationBtn" mnemonicParsing="false" onAction="#initialize_Participation" prefHeight="26.0" prefWidth="179.0" stylesheets="@fullpackstyling.css" text="Participation List" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="insert_btn1" mnemonicParsing="false" prefHeight="26.0" prefWidth="100.0" stylesheets="@fullpackstyling.css" text="Insert" textFill="WHITE" visible="false">
+                     <HBox.margin>
+                        <Insets left="200.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </HBox>
+                    </children>
+        </GridPane>
+        <Pane fx:id="pnl_status" layoutX="239.0" prefHeight="78.0" prefWidth="759.0" style="-fx-background-color: #1D267D;" AnchorPane.leftAnchor="239.0" AnchorPane.rightAnchor="-1.0">
+            <children>
+                <Label fx:id="lbl_status_mini" layoutX="78.0" prefHeight="37.0" prefWidth="229.0" text="Participation" textFill="WHITE">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Label>
+                <Label fx:id="lbl_status" layoutX="23.0" layoutY="27.0" text="Participation" textFill="WHITE">
+                    <font>
+                        <Font size="30.0" />
+                    </font>
+                </Label>
+                <Label layoutX="23.0" layoutY="6.0" text="/Home/" textFill="#f7f7f7">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Label>
+            </children></Pane>
+        <FontAwesomeIcon fx:id="btn_close" glyphName="CLOSE" layoutX="963.0" layoutY="30.0" size="2em" text="" wrappingWidth="16.000015258789062" />
+      <GridPane layoutX="248.0" layoutY="86.0" prefHeight="164.0" prefWidth="743.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="marathon_Name">
+               <padding>
+                  <Insets left="20.0" />
+               </padding></Label>
+            <Label text="Runner_First_Name" GridPane.rowIndex="1">
+               <padding>
+                  <Insets left="20.0" />
+               </padding></Label>
+            <Label fx:id="registerLbl" text="registration_date" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <padding>
+                  <Insets left="20.0" />
+               </padding></Label>
+            <TextField fx:id="RunFirstTxt" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <CheckBox fx:id="Payed_CheckBox" mnemonicParsing="false" prefHeight="41.0" prefWidth="154.0" text="Payed" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <padding>
+                  <Insets left="20.0" />
+               </padding></CheckBox>
+            <DatePicker fx:id="registerDatepicker" prefHeight="26.0" prefWidth="186.0" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="1">
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </DatePicker>
+            <ComboBox fx:id="maraCombox" onAction="#Marathon_Name_Combobox" onMouseClicked="#select_Combobox" prefHeight="26.0" prefWidth="184.0" GridPane.columnIndex="1" />
+            <Label text="Runner_Last_Name" GridPane.rowIndex="2">
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="RunLastTxt" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label text="Age" GridPane.columnIndex="2">
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="ageFields" GridPane.columnIndex="3" />
+            <TextField fx:id="EmailText" promptText="Email" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+    </children>
+</AnchorPane>
